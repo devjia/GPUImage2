@@ -26,6 +26,7 @@ Package.resolved
 *.pbxuser
 *.xcworkspace
 xcuserdata
+xcshareddata
 .vscode
 
 # Documentation
