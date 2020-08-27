@@ -208,7 +208,7 @@ func hashForFramebufferWithProperties(orientation:ImageOrientation, size:GLSize,
 // MARK: Framebuffer-related extensions
 
 extension Rotation {
-    func textureCoordinates() -> [GLfloat] {
+    public func textureCoordinates() -> [GLfloat] {
         switch self {
             case .noRotation: return [0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0]
             case .rotateCounterclockwise: return [0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0]
@@ -221,7 +221,7 @@ extension Rotation {
         }
     }
     
-    func croppedTextureCoordinates(offsetFromOrigin:Position, cropSize:Size) -> [GLfloat] {
+    public func croppedTextureCoordinates(offsetFromOrigin:Position, cropSize:Size) -> [GLfloat] {
         let minX = GLfloat(offsetFromOrigin.x)
         let minY = GLfloat(offsetFromOrigin.y)
         let maxX = GLfloat(offsetFromOrigin.x) + GLfloat(cropSize.width)
